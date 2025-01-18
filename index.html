@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Writing Goal Tracker</title>
+    <link rel="shortcut icon" href="Asset/logo2.png" type="image/x-icon">
+    <!-- for font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Daily Writing Goal Tracker</h1>
+        <div class="header-btn">
+            <button id="todo-btn" class="bg-color">Todo</button>
+            <button id="calendar-btn">Calendar</button>
+            <button id="mindmap-btn">Mind Map</button>
+        </div>
+    </header>
+    <main>
+        <!-- TO-DO portion -->
+        <div class="todo">
+            <div class="todo-container">
+                <div class="stats-container">
+                    <div class="details">
+                        <h2>Todo</h2>
+                        <p>Keep it up!</p>
+                        <div id="progressBar">
+                            <div id="progress"></div>
+                        </div>
+                    </div>
+                    <div class="stats-number">
+                        <p id="numbers">0/0</p>
+                    </div>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="Write your goals..." id="todo-input">
+                    <button type="submit" id="todo-button">+</button>
+                </form>
+                <ul id="task-list">
+                    <!--<li> <div class="taskItem">
+                        <div class="task">
+                            <input type="checkbox" class="isDone">
+                            <p>Eat</p>
+                        </div>
+                        <div class="icon">
+                            <img src="./Asset/edit.png" alt="Edit">
+                            <img src="./Asset/bin.png" alt="Delete">
+                        </div>
+                    </div> </li> -->
+                </ul>
+            </div>
+            <div id="todo-text">
+                <h3>#Quote</h3>
+                <p>"Success is the sum of small efforts, repeated day in and day out." — Robert Collier</p>
+                <h3 >#Todo History(Upto 7 days)</h3>
+                <ul id="history">
+                    <li class="historyItem"><div>80.2%</div><div>Task Completed Updated on 1/17/2025</div></li>
+                    <li class="historyItem"><div>25.0%</div><div>Task Completed Updated on 1/16/2025</div></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Calender portion -->
+        <div id="calendar" class="hide">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonth"><i class="fa-solid fa-arrow-left"></i></button>
+                    <h2 id="currentMonth">January 2025</h2>
+                    <button id="nextMonth"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="calendar-days">
+                        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+                        <div>Thu</div><div>Fri</div><div>Sat</div>
+                    </div>
+                    <div class="calendar-dates"></div>
+                </div>
+
+                <div class="event">
+                    <h3>Add Event</h3>
+                    <div class="event-form">
+                        <input type="date" id="eventDate" required>
+                        <input type="text" id="eventTitle" placeholder="Session Title" required>
+                        <textarea id="eventDescription" placeholder="Session Details"></textarea>
+                        <button id="addEvent">Add Session</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mind Map portion -->
+        <div id="mindmap" class="hide">
+            <div class="mindmap-container">
+                <div class="mindmap-toolbar">
+                    <button id="addNode">Add Node</button>
+                    <button id="connectNodes">Connect Nodes</button>
+                    <button id="deleteNode">Delete Node</button>
+                    <button id="clearMindmap">Clear All</button>
+                </div>
+                <div class="mindmap-canvas"></div>
+            </div>
+        </div>
+    </main>
+    <footer> &copy; All rights reserved by sk </footer>
+</div>
+    <script src="./script.js"></script>
+
+</body>
+</html>
